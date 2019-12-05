@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Labra4_tehtava2Chat</string>
+    <string name="text_comes_in_here">Text comes in here</string>
+    <string name="write_text_in_here">Write text in here</string>
+    <string name="close_connection">Close Connection</string>
+    <string name="send_message">Send message</string>
+    <string name="open_connection">Open Connection</string>
 </resources>
