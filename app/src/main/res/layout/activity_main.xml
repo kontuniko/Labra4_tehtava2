@@ -10,8 +10,8 @@
         android:id="@+id/btnCpenConnection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/open_connection"
         android:background="#4CAF50"
+        android:text="@string/open_connection"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -44,36 +44,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etMessageView" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@+id/btnSendMessage"
-            app:layout_constraintTop_toBottomOf="@+id/tvStatus">
 
-            <ListView
-                android:id="@+id/lvMessageView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="92dp"
-                android:hint="@string/text_comes_in_here"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/tvStatus"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/btnSendMessage"
-                app:layout_constraintVertical_bias="1.0" />
-        </LinearLayout>
+    <ListView
+        android:id="@+id/lvMessageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/text_comes_in_here"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSendMessage"
+        />
 
 
     <TextView
         android:id="@+id/tvStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:background="#A08A8A"
         android:textSize="20sp"
-        />
-
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

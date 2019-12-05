@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (echoClient != null && echoClient.getReadyState() == ReadyState.OPEN) {
                 EditText etMessageView = findViewById(R.id.etMessageView);
                 echoClient.send(etMessageView.getText().toString());
-                etMessageView.setText("");
+                //etMessageView.setText("");
                 }
             else{
                 Toast.makeText(this,"There is no connection! Please,make the connection first!",Toast.LENGTH_LONG).show();
@@ -82,9 +82,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onMessage(final String message) {     //
         runOnUiThread(new Runnable() {
             @Override
-            public void run() {
-                    arrayList.add(message);
-                    adapter.notifyDataSetChanged();
+            public void run() {                 //Lisätään listaan viestit
+                adapter.add(message);           //Toimii, kun on adapterin kautta, mutta ei jos on arrayList
+                adapter.notifyDataSetChanged(); //Päivitetään lista
             }
         });
     }
