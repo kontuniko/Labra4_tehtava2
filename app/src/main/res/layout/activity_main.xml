@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/btnCpenConnection"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Open Connection"
         android:background="#4CAF50"
@@ -18,7 +18,7 @@
 
     <Button
         android:id="@+id/btnCloseConnection"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="#C72222"
@@ -30,7 +30,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/messageView"
+        android:id="@+id/etMessageView"
         android:hint="Write text in here"
         app:layout_constraintTop_toBottomOf="@id/btnCloseConnection"
         />
@@ -42,20 +42,21 @@
         android:text="Send message"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/messageView" />
+        app:layout_constraintTop_toBottomOf="@id/etMessageView" />
 
 
-    <TextView
-        android:id="@+id/tvMessageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ListView
+        android:id="@+id/lvMessageView"
+        android:layout_width="345dp"
+        android:layout_height="450dp"
         android:layout_marginTop="92dp"
         android:hint="Text comes in here"
-        android:textSize="26dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/tvStatus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnSendMessage" />
+        app:layout_constraintTop_toBottomOf="@id/btnSendMessage"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/tvStatus"
@@ -63,6 +64,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         android:background="#A08A8A"
+        android:textSize="20dp"
         />
 
 
